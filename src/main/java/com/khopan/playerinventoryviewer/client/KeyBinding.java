@@ -7,5 +7,5 @@ import net.minecraft.client.KeyMapping;
 public class KeyBinding {
 	private KeyBinding() {}
 
-	public static final KeyMapping OPEN_PLAYER_INVENTORY_KEY = new KeyMapping("key.playerinventoryviewer.open", GLFW.GLFW_KEY_P, "key.playerinventory.category");
+	public static final KeyMapping OPEN_PLAYER_INVENTORY_KEY = new KeyMapping("key.playerinventoryviewer.open", GLFW.GLFW_KEY_Y, "key.playerinventory.category");
 }
