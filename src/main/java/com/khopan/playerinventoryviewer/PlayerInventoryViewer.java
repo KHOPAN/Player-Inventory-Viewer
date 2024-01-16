@@ -19,6 +19,8 @@ public class PlayerInventoryViewer {
 	public static final String MOD_IDENTIFIER = "playerinventoryviewer";
 	public static final String MOD_VERSION = "1.0.0";
 
+	public static final String NETWORK_PROTOCOL_VERSION = "1.0.0";
+
 	public static final Logger LOGGER = LoggerFactory.getLogger(PlayerInventoryViewer.MOD_NAME);
 
 	public PlayerInventoryViewer() {
