@@ -22,6 +22,6 @@ public class OpenPlayerInventoryPacket implements ClientPacket {
 	@Override
 	public void executeServer(Context context, ServerPlayer player) {
 		PlayerInventoryViewer.LOGGER.info("Open Inventory Key is pressed, opening {}'s inventory", "KHOPAN");
-		player.openMenu(new PlayerInventoryMenuProvider());
+		player.openMenu(new PlayerInventoryMenuProvider(player));
 	}
 }
