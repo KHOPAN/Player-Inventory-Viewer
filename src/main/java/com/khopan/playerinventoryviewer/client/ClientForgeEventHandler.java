@@ -1,10 +1,9 @@
 package com.khopan.playerinventoryviewer.client;
 
 import com.khopan.playerinventoryviewer.PlayerInventoryViewer;
+import com.khopan.playerinventoryviewer.packet.PacketRegistry;
+import com.khopan.playerinventoryviewer.packet.client.OpenPlayerInventoryPacket;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,9 +14,7 @@ public class ClientForgeEventHandler {
 	@SubscribeEvent
 	public void onKeyPressed(InputEvent.Key Event) {
 		if(KeyBinding.OPEN_PLAYER_INVENTORY_KEY.consumeClick()) {
-			Minecraft minecraft = Minecraft.getInstance();
-			LocalPlayer player = minecraft.player;
-			player.displayClientMessage(Component.literal("Open Player Inventory key is pressed"), false);
+			PacketRegistry.server(new OpenPlayerInventoryPacket());
 		}
 	}
 }

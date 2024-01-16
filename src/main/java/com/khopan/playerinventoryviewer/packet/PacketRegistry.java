@@ -3,6 +3,7 @@ package com.khopan.playerinventoryviewer.packet;
 import java.lang.reflect.Modifier;
 
 import com.khopan.playerinventoryviewer.PlayerInventoryViewer;
+import com.khopan.playerinventoryviewer.packet.client.OpenPlayerInventoryPacket;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
@@ -25,6 +26,7 @@ public class PacketRegistry {
 
 	public static void register() {
 		PlayerInventoryViewer.LOGGER.info("Registering Packets");
+		PacketRegistry.register(OpenPlayerInventoryPacket.class);
 	}
 
 	public static void client(ServerPacket packet, ServerPlayer player) {
